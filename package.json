@@ -1,0 +1,28 @@
+{
+  "name": "wrestlers",
+  "version": "0.0.0",
+  "scripts": {
+    "postinstall": ".\\node_modules\\.bin\\webdriver-manager update",
+    "webdriver-start": ".\\node_modules\\.bin\\webdriver-manager start",
+    "protractor": ".\\node_modules\\.bin\\protractor protractor.conf.js",
+    "test": "npm-run-all -p -r webdriver-start protractor"
+  },
+  "dependencies": {
+    "chance": "^1.0.4",
+    "faker": "^3.1.0",
+    "hashmap": "^2.0.6",
+    "jasmine-reporters": "^2.2.0",
+    "json-schema-faker": "^0.4.0",
+    "jsonfile": "^2.4.0",
+    "lodash": "^4.17.2",
+    "moment": "^2.17.1",
+    "npm": "^4.0.3",
+    "npm-run-all": "^3.1.2",
+    "protractor": "^4.0.11",
+    "protractor-html-reporter": "^1.2.4",
+    "request": "^2.79.0"
+  },
+  "description": "test task",
+  "author": "Viktor Mikhalkin",
+  "license": "ISC"
+}

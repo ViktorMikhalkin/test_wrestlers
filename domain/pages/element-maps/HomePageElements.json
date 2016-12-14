@@ -1,0 +1,139 @@
+{
+  "pageElements" : [
+    {
+      "elementName": "NEW",
+      "elementType": "BUTTON",
+      "locatorType": "css",
+      "locator": "[ng-click=\"newWrestler()\"]",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "NEW_WRESTLER",
+      "elementType": "DIV",
+      "locatorType": "css",
+      "locator": "li.ng-isolate-scope:nth-of-type(2) div",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "LAST_NAME",
+      "elementType": "INPUT",
+      "locatorType": "css",
+      "locator": "[placeholder=\"Last name\"]",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "FIRST_NAME",
+      "elementType": "INPUT",
+      "locatorType": "css",
+      "locator": "[placeholder=\"First name\"]",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "DATE_OF_BIRTH",
+      "elementType": "INPUT",
+      "locatorType": "css",
+      "locator": "[placeholder=\"Date of Birth\"]",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "MIDDLE_NAME",
+      "elementType": "INPUT",
+      "locatorType": "css",
+      "locator": "[placeholder=\"Middle name\"]",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "REGION_1",
+      "elementType": "SELECT",
+      "locatorType": "css",
+      "locator": "[value=\"wr.region1\"] > div > select",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "FST_1",
+      "elementType": "SELECT",
+      "locatorType": "css",
+      "locator": "[value=\"wr.fst1\"] > div > select",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "STYLE",
+      "elementType": "SELECT",
+      "locatorType": "css",
+      "locator": "[value=\"wr.style\"] > div > select",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "LIC_TYPE",
+      "elementType": "SELECT",
+      "locatorType": "css",
+      "locator": "[value=\"wr.lictype\"] > div > select",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "EXPIRES",
+      "elementType": "SELECT",
+      "locatorType": "css",
+      "locator": "[value=\"wr.expires\"] > div > select",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "SAVE",
+      "elementType": "BUTTON",
+      "locatorType": "css",
+      "locator": "[ng-click^=\"save\"]",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "DELETE",
+      "elementType": "BUTTON",
+      "locatorType": "css",
+      "locator": "[ng-click=\"delete()\"]",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "SEARCH_FOR",
+      "elementType": "INPUT",
+      "locatorType": "css",
+      "locator": "[ng-model=\"searchFor\"]",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "SEARCH_FOR",
+      "elementType": "BUTTON",
+      "locatorType": "css",
+      "locator": "[type=\"submit\"]",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    }
+  ]
+}

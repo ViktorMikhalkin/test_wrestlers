@@ -1,0 +1,18 @@
+{
+  "lname": "Papen",
+  "fname": "Jean",
+  "mname": "Pier",
+  "dob":"24-06-1991",
+  "style":"1",
+  "region1":"11",
+  "region2":"10",
+  "fst1":"2",
+  "fst2":"6",
+  "trainerid1":"91",
+  "trainer1":"Ivanuk V.V.",
+  "trainerid2":"34",
+  "trainer2":"Petruk P.P.",
+  "expires":"2015",
+  "lictype":"1",
+  "card_state":"1"
+}

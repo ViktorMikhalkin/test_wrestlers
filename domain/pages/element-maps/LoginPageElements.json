@@ -1,0 +1,31 @@
+{
+  "pageElements" : [
+    {
+      "elementName": "LOGIN",
+      "elementType": "INPUT",
+      "locatorType": "css",
+      "locator": "[placeholder=\"Login\"]",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "PASSWORD",
+      "elementType": "INPUT",
+      "locatorType": "css",
+      "locator": "[placeholder=\"Password\"]",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "SUBMIT",
+      "elementType": "BUTTON",
+      "locatorType": "css",
+      "locator": "[type=\"submit\"]",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    }
+  ]
+}
