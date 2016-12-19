@@ -1,5 +1,7 @@
 'use strict';
 
+var EC = protractor.ExpectedConditions;
+
 var PageObject = require('../../core/page-object/PageObject');
 var extend = require('../../core/utils/extend');
 
@@ -11,6 +13,10 @@ var LoginPage = function() {
 };
 
 extend(LoginPage, PageObject);
+
+LoginPage.prototype.isLoaded = function () {
+    return browser.wait(EC.visibilityOf($('tbody')), 5000);
+};
 
 LoginPage.prototype.setLogin = function (login) {
     return this.getElement('LOGIN_INPUT').setValue(login);

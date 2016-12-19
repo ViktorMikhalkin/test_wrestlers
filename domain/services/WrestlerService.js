@@ -2,16 +2,15 @@
 
 var request = require('request');
 var j = request.jar();
-var cookie = request.cookie('PHPSESSID=pokh17lrg57fe831ke8vtmu556');
-var url = 'http://streamtv.net.ua/base';
-j.setCookie(cookie, 'http://streamtv.net.ua/base');
 
 var Wrestler = require('../entities/wrestler.js').Wrestler;
 
 var _ = require('lodash');
 
-var WrestlerService = function () {
-    this._baseUrl = 'http://streamtv.net.ua/base/php/wrestler/';
+var WrestlerService = function (url) {
+    this._url = url;
+    this._baseUrl = url + 'php/wrestler/';
+    this._cookies;
 
     this._createWrestlerBySearchMapping = function (obj) {
         var wrestler = new Wrestler();
@@ -54,8 +53,28 @@ var WrestlerService = function () {
     };
 };
 
+WrestlerService.prototype.getCookie = function (name) {
+    return browser.executeScript('return document.cookie;')
+        .then(function (cookieString) {
+            return cookieString.substr(cookieString.indexOf(name) + name.length + 1);
+        });
+};
+
+WrestlerService.prototype.setCookie = function (name, value) {
+    var defer = protractor.promise.defer();
+
+    // this._cookies[name] = value;
+
+    this._cookies = request.cookie(name + '=' + value);
+
+    defer.fulfill(this._cookies);
+
+    return defer.promise;
+};
+
 WrestlerService.prototype.get = function (urlOp) {
     var url = this._baseUrl + urlOp;
+    j.setCookie(this._cookies, url);
     var options = {
         url: url,
         jar: j,
@@ -63,6 +82,7 @@ WrestlerService.prototype.get = function (urlOp) {
     };
 
     var defer = protractor.promise.defer();
+
 
     request.get(options, function (error, response, body) {
         console.log(response.statusCode);

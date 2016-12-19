@@ -147,4 +147,8 @@ HomePage.prototype.findById = function (id) {
         });
 };
 
+HomePage.prototype.openMainTab = function () {
+    return this.getElement('MAIN_NAV_TAB').click();
+};
+
 module.exports = HomePage;

@@ -134,6 +134,15 @@
       "parentId": "",
       "childId": "",
       "mapFile": ""
+    },
+    {
+      "elementName": "MAIN_NAV_TAB",
+      "elementType": "DIV",
+      "locatorType": "css",
+      "locator": ".nav-tabs > li:nth-of-type(1) .tab-heading",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
     }
   ]
 }
