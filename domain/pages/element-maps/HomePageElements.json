@@ -143,6 +143,24 @@
       "parentId": "",
       "childId": "",
       "mapFile": ""
+    },
+    {
+      "elementName": "DELETE_CONFIRMATION_POPUP",
+      "elementType": "DIV",
+      "locatorType": "css",
+      "locator": ".modal-content",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
+    },
+    {
+      "elementName": "YES",
+      "elementType": "BUTTON",
+      "locatorType": "css",
+      "locator": "[ng-click=\"ok()\"]",
+      "parentId": "",
+      "childId": "",
+      "mapFile": ""
     }
   ]
 }

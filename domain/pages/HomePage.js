@@ -3,11 +3,12 @@
 var PageObject = require('../../core/page-object/PageObject');
 var extend = require('../../core/utils/extend');
 
-
 var HOME_PAGE_URL = 'http://streamtv.net.ua/base/';
 var HOME_PAGE_MAP_FILE = './domain/pages/element-maps/HomePageElements.json';
 
 var Wrestler = require('../entities/wrestler.js').Wrestler;
+
+var EC = protractor.ExpectedConditions;
 
 var HomePage = function() {
     HomePage.superclass.constructor.call(this, HOME_PAGE_URL, HOME_PAGE_MAP_FILE);
@@ -148,7 +149,25 @@ HomePage.prototype.findById = function (id) {
 };
 
 HomePage.prototype.openMainTab = function () {
-    return this.getElement('MAIN_NAV_TAB').click();
+    return this.getElement('MAIN_NAV_TAB_DIV').click();
+};
+
+HomePage.prototype.delete = function () {
+    return this.getElement('DELETE_BUTTON').click();
+};
+
+HomePage.prototype.confirmDeletion = function () {
+    return this.getElement('YES_BUTTON').click();
+};
+
+HomePage.prototype.deleteWrestler = function (id) {
+    return this.findById(id)
+        .then(function () {
+            return this.delete();
+        }.bind(this))
+        .then(function () {
+            return this.confirmDeletion();
+        }.bind(this));
 };
 
 module.exports = HomePage;

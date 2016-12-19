@@ -355,6 +355,19 @@ Wrestler.prototype.isEqual = function (wrestler) {
     return _.isEqualWith(_.omit(this, extraFields), _.omit(wrestler, extraFields));
 };
 
+Wrestler.prototype.isEmpty = function () {
+    var empty = true;
+
+    var fieldValues = _.toArray(this);
+    fieldValues.forEach(function (item, i, arr) {
+        if (item) {
+            empty = false;
+        }
+    }, this);
+
+    return empty;
+};
+
 module.exports = {
     WrestlerSchema: WrestlerSchema,
     Wrestler: Wrestler

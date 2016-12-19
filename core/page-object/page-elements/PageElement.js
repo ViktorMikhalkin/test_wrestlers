@@ -1,7 +1,6 @@
 'use strict';
 
-var Selenium = require('selenium-webdriver');
-var Protractor = require('protractor');
+var EC = protractor.ExpectedConditions;
 
 var PAGE_ELEMENT_TIMEOUT = 60000;
 
@@ -93,7 +92,6 @@ PageElement.prototype.get = function() {
 
 PageElement.prototype.isDisplayed = function () {
 	var item = this.get();
-    var EC = Protractor.protractor.ExpectedConditions;
 
     return browser.wait(EC.visibilityOf(item), PAGE_ELEMENT_TIMEOUT);
 };
@@ -113,7 +111,9 @@ PageElement.prototype.disappear = function () {
 };
 
 PageElement.prototype.click = function() {
-    return this.get().click();
+	return browser.wait(EC.elementToBeClickable(this.get()), 5000).then(function () {
+        return this.get().click();
+    }.bind(this));
 };
 
 

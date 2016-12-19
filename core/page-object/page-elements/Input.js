@@ -15,7 +15,7 @@ Input.prototype.getValue = function () {
 };
 
 Input.prototype.setValue = function(str) {
-    return this.get().sendKeys(str);
+    return this.get().click().clear().sendKeys(str);
 };
 
 module.exports = Input;
